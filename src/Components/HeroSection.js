@@ -1,185 +1,247 @@
-import React, { useState } from 'react'
-import Typist from 'react-typist';
-import BackgroundImg from '../images/baron14.jpg';
-import styled from 'styled-components';
-import ParticleEffectButton from 'react-particle-effect-button';
-import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDownOutlined';
-import Parallax from 'react-rellax'
+import React from "react";
+//import Typist from "react-typist";
+import BackgroundImg from "../images/baron14.jpg";
+import styled from "styled-components";
+import Parallax from "react-rellax";
+import Particles from "react-particles-js";
+
+const particlesOptions = {
+  particles: {
+    number: {
+      value: 52,
+      density: {
+        enable: true,
+        value_area: 2000
+      }
+    },
+    color: {
+      value: "#ffffff"
+    },
+    shape: {
+      type: "circle",
+      stroke: {
+        width: 1,
+        color: "#bbbbbb"
+      },
+      polygon: {
+        nb_sides: 5
+      },
+      image: {
+        src: "img/github.svg",
+        width: 100,
+        height: 100
+      }
+    },
+    opacity: {
+      value: 0.5,
+      random: false,
+      anim: {
+        enable: false,
+        speed: 1,
+        opacity_min: 0.1,
+        sync: false
+      }
+    },
+    size: {
+      value: 2.891476416322726,
+      random: true,
+      anim: {
+        enable: false,
+        speed: 40,
+        size_min: 0.1,
+        sync: false
+      }
+    },
+    line_linked: {
+      enable: true,
+      distance: 150,
+      color: "#ffffff",
+      opacity: 0.1,
+      width: 1
+    },
+    move: {
+      enable: true,
+      speed: 1.206824121731046,
+      direction: "none",
+      random: false,
+      straight: false,
+      out_mode: "out",
+      bounce: false,
+      attract: {
+        enable: false,
+        rotateX: 600,
+        rotateY: 1200
+      }
+    }
+  },
+  interactivity: {
+    detect_on: "canvas",
+    events: {
+      onhover: {
+        enable: true,
+        mode: "bubble"
+      },
+      onclick: {
+        enable: true,
+        mode: "push"
+      },
+      resize: true
+    },
+    modes: {
+      grab: {
+        distance: 400,
+        line_linked: {
+          opacity: 1
+        }
+      },
+      bubble: {
+        distance: 400,
+        size: 0,
+        duration: 2,
+        opacity: 8,
+        speed: 3
+      },
+      repulse: {
+        distance: 200,
+        duration: 0.4
+      },
+      push: {
+        particles_nb: 4
+      },
+      remove: {
+        particles_nb: 2
+      }
+    }
+  },
+  retina_detect: true
+};
 
 export default function HeroSection() {
-
-    const [typeStatus, setTypeStatus] = useState(true);
-    // const [hidden, setHidden] = useState(false);
-    return (
-        <div>
-            {/* <NavBar>
-                <ParticleEffectButton
-                    color='rgba(101, 190, 113, 0.96)'
-                    hidden={hidden}
-                >
-                    <SeeResume
-                        onClick={() => {
-                            setHidden(true);
-                            setTimeout(() => setHidden(false), 3000);
-                        }}
-                    >
-                        See Resume
-                        </SeeResume>
-                </ParticleEffectButton>
-            </NavBar> */}
-            <div style={{ width: "100vw", height: "100vh", overflow: "hidden", position: "relative" }}>
-                <LandingCard>
-                    <NameContainer>
-                        <h1>Thomas Hessburg</h1>
-                        <br />
-                        <p>Software Developer</p>
-                    </NameContainer>
-                    <TyperContainer>
-                        {typeStatus && <Typist
-                            cursor={{
-                                show: false
-                            }}
-                            onTypingDone={() => {
-                                setTypeStatus(false);
-                                setTypeStatus(true);
-                            }}
-                        >
-                            <Parallax speed={2}>
-                                <h2>React</h2>
-                                <Typist.Backspace count={5} delay={800} />
-                                <h2>Redux</h2>
-                                <Typist.Backspace count={5} delay={800} />
-                                <h2>Node</h2>
-                                <Typist.Backspace count={4} delay={800} />
-                                <h2>Express</h2>
-                                <Typist.Backspace count={7} delay={800} />
-                            </Parallax>
-                        </Typist>}
-                    </TyperContainer>
-                </LandingCard>
-                <BGImg src={BackgroundImg} />
-                {/* <KeyboardArrowDown
-                    style={{
-                        position: "absolute",
-                        bottom: "25px",
-                        right: "25px",
-                        transform: "scale(3)",
-                        cursor: "pointer"
-                    }}
-                /> */}
-
-            </div>
-        </div >
-    )
+  return (
+    <Parallax speed={4}>
+      <HeroWrapper>
+        <Hero>
+          <h1>Thomas Hessburg</h1>
+          <h2>
+            <span>Full Stack</span> Web Developer
+          </h2>
+          <button
+            onClick={e => {
+              e.stopPropagation();
+            }}
+            style={{ cursor: "pointer" }}
+          >
+            See My Projects
+          </button>
+        </Hero>
+        <HeroParticles className="particles" params={particlesOptions} />
+      </HeroWrapper>
+      <Socials>
+        <i class="fab fa-github" />
+        <i class="fab fa-twitter" />
+        <i class="fab fa-facebook-square" />
+        <i class="fas fa-envelope-open" />
+      </Socials>
+    </Parallax>
+  );
 }
 
-
-const NavBar = styled.div`
-width: 200px;
-padding: 10px;
-position: absolute;
-right: 0;
-`;
-
-
-const LandingCard = styled.div`
-  margin: 35vh auto;
-  margin-left: 50vw;
-  max-width: 800px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 80%;
-  height: 30vh;
-  max-height: 280px;
-  background: rgba(43, 53, 71, 0.90);
-  box-shadow: 0 5px 18px rgba(10,10,10,0.35);
+const HeroWrapper = styled.div`
+  height: 100vh;
   position: relative;
-  @media(max-width: 1700px){
-    margin-left: 45vw;
-  }
-  @media(max-width: 1600px){
-    margin-left: 38vw;
-  }
-  @media(max-width: 1500px){
-    margin-left: 35vw;
-  }
-  @media(max-width: 1400px){
-    margin-left: 33vw;
-  }
-  @media(max-width: 1600px){
-    margin-left: 39vw;
-  }
-  @media(max-width: 1500px){
-    margin-left: 27vw;
-  }
-  @media(max-width: 1400px){
-    margin-left: 20vw;
-  }
-  @media(max-width: 1300px){
-    margin-left: 18vw;
-  }
-  @media(max-width: 1200px){
-    margin-left: 12vw;
-  }
-  @media(max-width: 1100px){
-    margin-left: 8vw;
-  }
-  h2{
-    font-size: 60px;
-    color: rgb(255,255,255);
-    font-weight: 100;
-    @media(max-width: 600px){
-      font-size: 40px;
+  overflow: hidden;
+  background-image: url(${BackgroundImg});
+  background-size: cover;
+  background-position: center;
+  background-color: black;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.4);
+  opactiy: 0.4;
+`;
+
+const Hero = styled.div`
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(18%, 22%, 31%, 0.8);
+  color: white;
+  h1 {
+    font-family: "Cormorant Unicase", serif;
+    font-weight: 200;
+    padding: 220px 0 0 0;
+    margin: 0;
+    font-size: 100px;
+    span {
+      color: #e8374f;
+    }
+    @media (max-width: 1100px) {
+      font-size: 80px;
+    }
+    @media (max-width: 850px) {
+      font-size: 65px;
+    }
+    @media (max-width: 680px) {
+      font-size: 55px;
     }
   }
-`;
-
-const TyperContainer = styled.div`
-  display: flex;
-`;
-
-const NameContainer = styled.div`
-    background: #828791;
-    color: white;
-    position: absolute;
-    top: -95px;
-    right: -40px;
-    padding: 10px 30px;
-    box-shadow: 0 3px 3px 2px rgba(0,0,0,0.2);
-    h1{
-        font-size: 30px;
-        margin-bottom: 0px;
-        @media(max-width: 600px){
-            font-size: 25px;
-          }
+  h2 {
+    font-family: "Cormorant Unicase", serif;
+    font-size: 40px;
+    margin: 0;
+    span {
+      color: #e8374f;
     }
-    p{
-        margin-top: 0;
-        font-size: 18px;
-        @media(max-width: 600px){
-            font-size: 14px;
-          }
+    @media (max-width: 1100px) {
+      font-size: 35px;
     }
-`;
-
-const BGImg = styled.img`
-  position: absolute;
-  top: 0px;
-  left: 0;
-  z-index: -1;
-  width: 40vw;
-  min-width: 370px;
-  overflow-x: hidden;
-  opacity: 0.9;
-  border-bottom-right-radius: 150px;
-  box-shadow: 4px 0 4px 2px rgba(0,0,0,0.3);
-`;
-
-const SeeResume = styled.div`
-    cursor: pointer;
-    padding: 10px;
-    color: black;
+    @media (max-width: 850px) {
+      font-size: 30px;
+    }
+    @media (max-width: 680px) {
+      font-size: 25px;
+    }
+  }
+  button {
+    color: #f53b54;
+    border: 2px solid #f53b54;
+    background: transparent;
     font-size: 20px;
+    width: 205px;
+    height: 45px;
+    margin: 15px;
+    position: relative;
+    z-index: 3;
+    &:hover {
+      background: #f53b54;
+      color: white;
+    }
+  }
+`;
+
+const HeroParticles = styled(Particles)`
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  height; 100vh;
+
+`;
+
+const Socials = styled.div`
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 30px;
+  color: white;
+  z-index: 3;
+  i {
+    cursor: pointer;
+    &:hover {
+      color: #f53b54;
+    }
+  }
 `;
