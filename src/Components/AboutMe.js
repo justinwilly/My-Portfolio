@@ -31,12 +31,35 @@ export default function AboutMe() {
           </AboutMeText>
 
           <AboutMeDecals>
-            <i className="fab fa-css3-alt" />
-            <i class="fab fa-html5" />
-            <i class="fab fa-js" />
-            <hr />
-            <i class="fab fa-react" />
-            <i class="fab fa-node-js" />
+            <h3>Technologies</h3>
+            <TechnologyEven>
+              <i className="fab fa-css3-alt" />
+              <h4>CSS</h4>
+            </TechnologyEven>
+            <TechnologyOdd>
+              <i className="fab fa-html5" />
+              <h4>HTML</h4>
+            </TechnologyOdd>
+            <TechnologyEven>
+              <i className="fab fa-js" />
+              <h4>JavaScript</h4>
+            </TechnologyEven>
+            <TechnologyOdd>
+              <i className="fab fa-react" />
+              <h4>React JS</h4>
+            </TechnologyOdd>
+            <TechnologyEven>
+              <i className="fab fa-node-js" />
+              <h4>Node JS </h4>
+            </TechnologyEven>
+            <TechnologyOdd>
+              <i class="fas fa-drafting-compass" />
+              <h4>UI Design</h4>
+            </TechnologyOdd>
+            <TechnologyEven>
+              <i class="fab fa-adobe" />
+              <h4>Adobe</h4>
+            </TechnologyEven>
           </AboutMeDecals>
         </AboutMeWrapper>
       </AboutMeInfo>
@@ -49,10 +72,10 @@ const AboutMeStripe = styled.div`
   display: flex;
   justify-content: center;
   padding: 100px 40px;
-  padding-bottom: 200px;
+  padding-bottom: 100px;
   width: 100vw;
   background: black;
-  clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 75%);
+  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
   color: white;
   @media (max-width: 900px) {
     clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
@@ -102,15 +125,18 @@ const AboutMeDecals = styled.div`
   padding: 10px;
   width: 55%;
   color: black;
-  height: 400px;
   background: white;
   @media (max-width: 900px) {
     width: 100%;
     margin-top: 25px;
   }
-
   i {
-    font-size: 80px;
+    font-size: 60px;
+  }
+  h3 {
+    font-size: 25px;
+    font-weight: 100;
+    text-decoration: underline;
   }
 `;
 
@@ -120,5 +146,54 @@ const AboutMeWrapper = styled.div`
   padding: 10px;
   @media (max-width: 900px) {
     flex-direction: column;
+  }
+`;
+
+const TechnologyEven = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  magin: 10px auto;
+  background: rgba(0, 0, 0, 0.03);
+  padding: 5px;
+  &:hover {
+    background: rgba(0, 0, 0, 0.19);
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  h4 {
+    font-size: 24px;
+    margin: 0;
+    color: #e8374f;
+  }
+`;
+const TechnologyOdd = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  magin: 10px auto;
+  background: rgba(0, 0, 0, 0.09);
+  padding: 5px;
+  &:hover {
+    background: rgba(0, 0, 0, 0.14);
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  h4 {
+    font-size: 24px;
+    margin: 0;
+    color: #e8374f;
   }
 `;

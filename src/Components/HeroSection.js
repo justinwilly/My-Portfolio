@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 //import Typist from "react-typist";
 import BackgroundImg from "../images/baron14.jpg";
 import styled from "styled-components";
 import Parallax from "react-rellax";
 import Particles from "react-particles-js";
+import ParticleEffectButton from "react-particle-effect-button";
 
 const particlesOptions = {
   particles: {
@@ -117,6 +118,8 @@ const particlesOptions = {
 };
 
 export default function HeroSection() {
+  const [hidden, setHidden] = useState(false);
+
   return (
     <Parallax speed={4}>
       <HeroWrapper>
@@ -125,22 +128,46 @@ export default function HeroSection() {
           <h2>
             <span>Full Stack</span> Web Developer
           </h2>
-          <button
-            onClick={e => {
-              e.stopPropagation();
-            }}
-            style={{ cursor: "pointer" }}
+          <ParticleEffectButton
+            particlesAmountCoefficient={10}
+            oscillationCoefficient={60}
+            direction="top"
+            color="#e8374f"
+            hidden={hidden}
           >
-            See My Projects
-          </button>
+            <button
+              onClick={e => {
+                e.stopPropagation();
+                setHidden(true);
+                setTimeout(() => {
+                  setHidden(false);
+                }, 4000);
+              }}
+              style={{ cursor: "pointer" }}
+            >
+              See My Projects
+            </button>
+          </ParticleEffectButton>
         </Hero>
         <HeroParticles className="particles" params={particlesOptions} />
       </HeroWrapper>
       <Socials>
-        <i class="fab fa-github" />
-        <i class="fab fa-twitter" />
-        <i class="fab fa-facebook-square" />
-        <i class="fas fa-envelope-open" />
+        <a href="https://github.com/TomHessburg" target="_blank">
+          <i className="fab fa-github" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/thomas-hessburg-596948180/"
+          target="_blank"
+        >
+          <i className="fab fa-linkedin" />
+        </a>
+        <a href="https://twitter.com/HessburgThomas" target="_blank">
+          <i className="fab fa-twitter" />
+        </a>
+        <a href="https://www.facebook.com/tommy.hessburg" target="_blank">
+          <i className="fab fa-facebook-square" />
+        </a>
+        <i className="fas fa-envelope-open" />
       </Socials>
     </Parallax>
   );
@@ -167,9 +194,10 @@ const Hero = styled.div`
   h1 {
     font-family: "Cormorant Unicase", serif;
     font-weight: 200;
-    padding: 220px 0 0 0;
+    padding: 30vh 0 0 0;
     margin: 0;
     font-size: 100px;
+    animation: TEXT-FADE 2.5s ease;
     span {
       color: #e8374f;
     }
@@ -186,7 +214,9 @@ const Hero = styled.div`
   h2 {
     font-family: "Cormorant Unicase", serif;
     font-size: 40px;
+    font-weight: 300;
     margin: 0;
+    animation: TEXT-FADE 3s ease;
     span {
       color: #e8374f;
     }
@@ -210,9 +240,19 @@ const Hero = styled.div`
     margin: 15px;
     position: relative;
     z-index: 3;
+    animation: TEXT-FADE 4s ease;
     &:hover {
       background: #f53b54;
       color: white;
+    }
+  }
+
+  @keyframes TEXT-FADE {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
     }
   }
 `;
@@ -238,6 +278,9 @@ const Socials = styled.div`
   font-size: 30px;
   color: white;
   z-index: 3;
+  a {
+    color: white;
+  }
   i {
     cursor: pointer;
     &:hover {
