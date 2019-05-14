@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import BGTexture from "../images/ep_naturalblack.png";
+import styles from "./HoverFx.module.scss";
 
 export default function AboutMe() {
+  const [css, setCss] = useState(false);
+  const [html, setHtml] = useState(false);
+  const [js, setJs] = useState(false);
+  const [react, setReact] = useState(false);
+  const [node, setNode] = useState(false);
+  const [uiDesign, setUiDesign] = useState(false);
+  const [adobe, setAdobe] = useState(false);
+  const [git, setGit] = useState(false);
+
   return (
     <AboutMeStripe style={{ backgroundImage: `url(${BGTexture})` }}>
       <AboutMeInfo>
@@ -32,34 +42,131 @@ export default function AboutMe() {
 
           <AboutMeDecals>
             <h3>Technologies</h3>
-            <TechnologyEven>
+            <TechnologyEven style={{ position: "relative" }}>
               <i className="fab fa-css3-alt" />
               <h4>CSS</h4>
+              <PopOver
+                className={css ? styles.popoverHover : styles.popoverHoverOut}
+                onMouseEnter={e => {
+                  setCss(true);
+                }}
+                onMouseLeave={e => {
+                  setCss(false);
+                }}
+              >
+                <p>Experienced in CSS, SASS, LESS</p>
+              </PopOver>
             </TechnologyEven>
-            <TechnologyOdd>
+            <TechnologyOdd style={{ position: "relative" }}>
               <i className="fab fa-html5" />
               <h4>HTML</h4>
+              <PopOver
+                className={html ? styles.popoverHover : styles.popoverHoverOut}
+                onMouseEnter={e => {
+                  setHtml(true);
+                }}
+                onMouseLeave={e => {
+                  setHtml(false);
+                }}
+              >
+                <p>Practiced in semantic HTML and JSX</p>
+              </PopOver>
             </TechnologyOdd>
-            <TechnologyEven>
+            <TechnologyEven style={{ position: "relative" }}>
               <i className="fab fa-js" />
               <h4>JavaScript</h4>
+              <PopOver
+                className={js ? styles.popoverHover : styles.popoverHoverOut}
+                onMouseEnter={e => {
+                  setJs(true);
+                }}
+                onMouseLeave={e => {
+                  setJs(false);
+                }}
+              >
+                <p>Writing clean, ES6 syntax JavaScript is a strength</p>
+              </PopOver>
             </TechnologyEven>
-            <TechnologyOdd>
+            <TechnologyOdd style={{ position: "relative" }}>
               <i className="fab fa-react" />
               <h4>React JS</h4>
+              <PopOver
+                className={react ? styles.popoverHover : styles.popoverHoverOut}
+                onMouseEnter={e => {
+                  setReact(true);
+                }}
+                onMouseLeave={e => {
+                  setReact(false);
+                }}
+              >
+                <p>Excellent at modern React/Redux (incuding hooks)</p>
+              </PopOver>
             </TechnologyOdd>
-            <TechnologyEven>
+            <TechnologyEven style={{ position: "relative" }}>
               <i className="fab fa-node-js" />
               <h4>Node JS </h4>
+              <PopOver
+                className={node ? styles.popoverHover : styles.popoverHoverOut}
+                onMouseEnter={e => {
+                  setNode(true);
+                }}
+                onMouseLeave={e => {
+                  setNode(false);
+                }}
+              >
+                <p>Node/Express backend development is a favorite</p>
+              </PopOver>
             </TechnologyEven>
-            <TechnologyOdd>
-              <i class="fas fa-drafting-compass" />
+            <TechnologyOdd style={{ position: "relative" }}>
+              <i className="fas fa-drafting-compass" />
               <h4>UI Design</h4>
+              <PopOver
+                className={
+                  uiDesign ? styles.popoverHover : styles.popoverHoverOut
+                }
+                onMouseEnter={e => {
+                  setUiDesign(true);
+                }}
+                onMouseLeave={e => {
+                  setUiDesign(false);
+                }}
+              >
+                <p>Building clean UI's is a passion of mine</p>
+              </PopOver>
             </TechnologyOdd>
-            <TechnologyEven>
-              <i class="fab fa-adobe" />
+            <TechnologyEven style={{ position: "relative" }}>
+              <i className="fab fa-adobe" />
               <h4>Adobe</h4>
+              <PopOver
+                className={adobe ? styles.popoverHover : styles.popoverHoverOut}
+                onMouseEnter={e => {
+                  setAdobe(true);
+                }}
+                onMouseLeave={e => {
+                  setAdobe(false);
+                }}
+              >
+                <p>Able to work with design docs in Photoshop and XD</p>
+              </PopOver>
             </TechnologyEven>
+            <TechnologyOdd style={{ position: "relative" }}>
+              <i className="fab fa-github" />
+              <h4>Git</h4>
+              <PopOver
+                className={git ? styles.popoverHover : styles.popoverHoverOut}
+                onMouseEnter={e => {
+                  setGit(true);
+                }}
+                onMouseLeave={e => {
+                  setGit(false);
+                }}
+              >
+                <p>
+                  Solid git habbits are very important in my day to day
+                  development
+                </p>
+              </PopOver>
+            </TechnologyOdd>
           </AboutMeDecals>
         </AboutMeWrapper>
       </AboutMeInfo>
@@ -131,7 +238,7 @@ const AboutMeDecals = styled.div`
     margin-top: 25px;
   }
   i {
-    font-size: 60px;
+    font-size: 75px;
   }
   h3 {
     font-size: 25px;
@@ -151,16 +258,12 @@ const AboutMeWrapper = styled.div`
 
 const TechnologyEven = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   magin: 10px auto;
   background: rgba(0, 0, 0, 0.03);
-  padding: 5px;
-  &:hover {
-    background: rgba(0, 0, 0, 0.19);
-  }
-
+  padding: 5px 80px;
   div {
     display: flex;
     flex-direction: column;
@@ -168,23 +271,19 @@ const TechnologyEven = styled.div`
     align-items: center;
   }
   h4 {
-    font-size: 24px;
+    font-size: 20px;
     margin: 0;
     color: #e8374f;
   }
 `;
 const TechnologyOdd = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   magin: 10px auto;
   background: rgba(0, 0, 0, 0.09);
-  padding: 5px;
-  &:hover {
-    background: rgba(0, 0, 0, 0.14);
-  }
-
+  padding: 5px 80px;
   div {
     display: flex;
     flex-direction: column;
@@ -192,8 +291,20 @@ const TechnologyOdd = styled.div`
     align-items: center;
   }
   h4 {
-    font-size: 24px;
+    font-size: 20px;
     margin: 0;
     color: #e8374f;
   }
+`;
+
+const PopOver = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  color: white;
+  opacity: 0;
+  cursor: initial;
 `;
