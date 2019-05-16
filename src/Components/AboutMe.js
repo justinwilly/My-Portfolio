@@ -182,10 +182,10 @@ const AboutMeStripe = styled.div`
   padding-bottom: 100px;
   width: 100vw;
   background: black;
-  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%);
   color: white;
   @media (max-width: 900px) {
-    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);
     padding: 100px 10px;
   }
 `;
@@ -196,12 +196,12 @@ const AboutMeInfo = styled.div`
   min-height: 300px;
   max-width: 1800px;
   padding: 15px;
-
+  font-family: "Montserrat", sans-serif;
   h2 {
-    font-family: "Cormorant Unicase", serif;
     font-size: 60px;
     margin: 10px;
     font-weight: 100;
+
     @media (max-width: 900px) {
       font-size: 48px;
     }
@@ -264,6 +264,7 @@ const TechnologyEven = styled.div`
   magin: 10px auto;
   background: rgba(0, 0, 0, 0.03);
   padding: 5px 80px;
+  font-weight: 400;
   div {
     display: flex;
     flex-direction: column;
@@ -284,6 +285,7 @@ const TechnologyOdd = styled.div`
   magin: 10px auto;
   background: rgba(0, 0, 0, 0.09);
   padding: 5px 80px;
+  font-weight: 400;
   div {
     display: flex;
     flex-direction: column;
@@ -303,8 +305,11 @@ const PopOver = styled.div`
   right: 0;
   width: 100%;
   height: 100%;
-  background: black;
+  background: #07a828;
   color: white;
   opacity: 0;
-  cursor: initial;
+  cursor: default;
+  p {
+    cursor: default;
+  }
 `;

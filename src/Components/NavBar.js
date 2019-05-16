@@ -1,15 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import { Link, NavLink } from "react-router-dom";
-import BGTexture from "../images/white-waves.png";
 
-export default function NavBar() {
+export default function NavBar(props) {
   return (
     <AppBar>
       <ul>
-        <li>resume</li>
-        <li>portfolio</li>
+        <li>home</li>
         <li>about me</li>
+        <li>portfolio</li>
         <li>contact</li>
       </ul>
     </AppBar>
@@ -17,7 +15,7 @@ export default function NavBar() {
 }
 
 const AppBar = styled.div`
-  width: 400px;
+  width: 390px;
   background: rgba(255, 255, 255, 0.98);
   z-index: 5;
   padding: 0 45px 0 0;
@@ -47,9 +45,4 @@ const AppBar = styled.div`
       }
     }
   }
-`;
-
-const StyledLink = styled(Link)`
-  color: black;
-  text-decoration: none;
 `;

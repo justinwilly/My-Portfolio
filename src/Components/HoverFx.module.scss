@@ -1,11 +1,11 @@
 .popoverHover {
   //opacity: 0.75;
-  animation: OPACTITYTRANSFORM 0.5s cubic-bezier(0.205, 0.56, 0.465, 0.935);
+  animation: OPACTITYTRANSFORM 0.5s ease;
   animation-fill-mode: forwards;
 }
 .popoverHoverOut {
   //opacity: 0.75;
-  animation: OPACTITYTRANSFORMOUT 0.5s cubic-bezier(0.205, 0.56, 0.465, 0.935);
+  animation: OPACTITYTRANSFORMOUT 0.5s ease;
   animation-fill-mode: forwards;
 }
 
@@ -14,13 +14,13 @@
     opacity: 0;
   }
   100% {
-    opacity: 0.85;
+    opacity: 0.9;
   }
 }
 
 @keyframes OPACTITYTRANSFORMOUT {
   0% {
-    opacity: 0.85;
+    opacity: 0.9;
   }
   100% {
     opacity: 0;

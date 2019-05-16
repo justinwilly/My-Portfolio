@@ -152,19 +152,32 @@ export default function HeroSection() {
         <HeroParticles className="particles" params={particlesOptions} />
       </HeroWrapper>
       <Socials>
-        <a href="https://github.com/TomHessburg" target="_blank">
+        <a
+          href="https://github.com/TomHessburg"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           <i className="fab fa-github" />
         </a>
         <a
           href="https://www.linkedin.com/in/thomas-hessburg-596948180/"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <i className="fab fa-linkedin" />
         </a>
-        <a href="https://twitter.com/HessburgThomas" target="_blank">
+        <a
+          href="https://twitter.com/HessburgThomas"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           <i className="fab fa-twitter" />
         </a>
-        <a href="https://www.facebook.com/tommy.hessburg" target="_blank">
+        <a
+          href="https://www.facebook.com/tommy.hessburg"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           <i className="fab fa-facebook-square" />
         </a>
         <i className="fas fa-envelope-open" />
@@ -235,6 +248,7 @@ const Hero = styled.div`
     border: 2px solid #f53b54;
     background: transparent;
     font-size: 20px;
+    font-family: "Montserrat", sans-serif;
     width: 205px;
     height: 45px;
     margin: 15px;
