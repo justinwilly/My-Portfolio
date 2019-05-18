@@ -166,7 +166,7 @@ export default function HeroSection() {
         >
           <i className="fab fa-linkedin" />
         </a>
-        <a
+        {/* <a
           href="https://twitter.com/HessburgThomas"
           rel="noopener noreferrer"
           target="_blank"
@@ -179,7 +179,7 @@ export default function HeroSection() {
           target="_blank"
         >
           <i className="fab fa-facebook-square" />
-        </a>
+        </a> */}
         <i className="fas fa-envelope-open" />
       </Socials>
     </Parallax>
@@ -288,7 +288,7 @@ const Socials = styled.div`
   right: 15px;
   width: 200px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   font-size: 30px;
   color: white;
   z-index: 3;
@@ -296,6 +296,7 @@ const Socials = styled.div`
     color: white;
   }
   i {
+    margin: 0 8px;
     cursor: pointer;
     &:hover {
       color: #f53b54;

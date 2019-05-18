@@ -5,6 +5,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import NavBar from "./Components/NavBar.js";
 import AboutMe from "./Components/AboutMe.js";
 import Projects from "./Components/Projects.js";
+import Contact from "./Components/Contact.js";
 
 import { Route } from "react-router-dom";
 
@@ -15,6 +16,7 @@ function App() {
       <Route path="/" exact render={props => <HeroSection {...props} />} />
       <Route path="/" exact render={props => <AboutMe {...props} />} />
       <Route path="/" exact render={props => <Projects {...props} />} />
+      <Route path="/" exact render={props => <Contact {...props} />} />
 
       <Route path="/" render={props => <NavBar {...props} />} />
     </div>
