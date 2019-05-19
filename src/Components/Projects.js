@@ -5,8 +5,8 @@ import styles from "./HoverFx.module.scss";
 
 import BGImg from "../images/debut_light.png";
 import TrainingBotPic from "../images/trainingbot3.png";
-import TipEasePic from "../images/codeimage2.jpeg";
-import AppraisersBFF from "../images/codeimage3.jpeg";
+import TipEasePic from "../images/tipeasepic.png";
+import AppraisersBFF from "../images/appbff2.png";
 import Portfolio from "../images/codeimage4.jpeg";
 
 function Projects(props) {
@@ -328,6 +328,6 @@ const ProjectDiscription = styled.div`
   position: relative;
   font-family: "Montserrat", sans-serif;
   p {
-    font-size: 18px;
+    font-size: 16px;
   }
 `;

@@ -140,11 +140,19 @@ export default function HeroSection() {
                 e.stopPropagation();
                 setHidden(true);
                 setTimeout(() => {
-                  window.scrollTo({
-                    top: 1800,
-                    left: 0,
-                    behavior: "smooth"
-                  });
+                  window.scrollTo(
+                    window.innerWidth > 900
+                      ? {
+                          top: window.innerHeight * 2 + 300,
+                          left: 0,
+                          behavior: "smooth"
+                        }
+                      : {
+                          top: window.innerHeight * 3 + 400,
+                          left: 0,
+                          behavior: "smooth"
+                        }
+                  );
                 }, 100);
                 setTimeout(() => {
                   setHidden(false);
@@ -173,6 +181,13 @@ export default function HeroSection() {
         >
           <i className="fab fa-linkedin" />
         </a>
+        <a
+          href="https://twitter.com/HessburgThomas"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <i className="fab fa-twitter" />
+        </a>
         {/* <a
           href="https://twitter.com/HessburgThomas"
           rel="noopener noreferrer"
@@ -187,7 +202,12 @@ export default function HeroSection() {
         >
           <i className="fab fa-facebook-square" />
         </a> */}
-        <i className="fas fa-envelope-open" />
+        <i
+          onClick={e => {
+            window.location.href = "mailto:thomas.hessburg@gmail.com";
+          }}
+          className="fas fa-envelope-open"
+        />
       </Socials>
     </Parallax>
   );
