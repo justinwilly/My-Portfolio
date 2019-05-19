@@ -140,6 +140,13 @@ export default function HeroSection() {
                 e.stopPropagation();
                 setHidden(true);
                 setTimeout(() => {
+                  window.scrollTo({
+                    top: 1800,
+                    left: 0,
+                    behavior: "smooth"
+                  });
+                }, 100);
+                setTimeout(() => {
                   setHidden(false);
                 }, 4000);
               }}

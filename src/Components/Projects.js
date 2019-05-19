@@ -4,7 +4,7 @@ import styled from "styled-components";
 import styles from "./HoverFx.module.scss";
 
 import BGImg from "../images/debut_light.png";
-import TrainingBotPic from "../images/codeimage1.jpeg";
+import TrainingBotPic from "../images/trainingbot3.png";
 import TipEasePic from "../images/codeimage2.jpeg";
 import AppraisersBFF from "../images/codeimage3.jpeg";
 import Portfolio from "../images/codeimage4.jpeg";
@@ -19,6 +19,7 @@ function Projects(props) {
     <PortfolioWrapper>
       <h2>Recent Projects</h2>
       <hr style={{ marginBottom: "60px" }} />
+
       <Project style={{ backgroundImage: `url(${TrainingBotPic})` }}>
         <HoverProject
           onMouseEnter={e => setTrainingBot(true)}
@@ -27,7 +28,16 @@ function Projects(props) {
         >
           <p>Check it out!</p>
           <div>
-            <button>github</button>
+            <button
+              onClick={e =>
+                window.open(
+                  "https://github.com/labs12-training-bot-2",
+                  "_blank"
+                )
+              }
+            >
+              github
+            </button>
             <button>live site</button>
           </div>
         </HoverProject>
@@ -41,6 +51,19 @@ function Projects(props) {
           </div>
         </ProjectCover>
       </Project>
+      <ProjectDiscription>
+        <p>
+          Training Bot was the capstone project for Lambda Schools main
+          curriculum that I built. The team consisted of myself, as well as four
+          other Lambda Students. It was built over the course of 5 weeks, and
+          included technologies such as React/Redux, Node/express with a
+          Postgres database, Stipe/Twillio/Sendgrid/Slack API's, Auth0 for
+          authentication, and Material UI design. I assisted in the entire
+          stack, implementing features on both the front end and the back end,
+          as well as conducted user testing and more.
+        </p>
+      </ProjectDiscription>
+
       <Project style={{ backgroundImage: `url(${TipEasePic})` }}>
         <HoverProject
           onMouseEnter={e => setTipEase(true)}
@@ -49,7 +72,16 @@ function Projects(props) {
         >
           <p>Check it out!</p>
           <div>
-            <button>github</button>
+            <button
+              onClick={e =>
+                window.open(
+                  "https://github.com/lambda-build-tipsease",
+                  "_blank"
+                )
+              }
+            >
+              github
+            </button>
             <button>live site</button>
           </div>
         </HoverProject>
@@ -62,6 +94,21 @@ function Projects(props) {
           </div>
         </ProjectCover>
       </Project>
+      <ProjectDiscription>
+        <p>
+          tipEase is an application that I built during my Lambda School back
+          end curriculum. It's an application that aims to helps service workers
+          by letting them recieve tips directly from customers, as opposed to
+          going through their employer. This was a four day sprint project, in
+          which I was tasked to build the back end using node/express and
+          postgres. I worked along side an android developer and a front end
+          architect in order to build the application. Due to unforseen
+          sircumstances, our web application wasnt completed by the student
+          tasked to complete it, so I took the time myself to build out the
+          front end that you see here as well!
+        </p>
+      </ProjectDiscription>
+
       <Project style={{ backgroundImage: `url(${AppraisersBFF})` }}>
         <HoverProject
           onMouseEnter={e => setAppBff(true)}
@@ -70,7 +117,16 @@ function Projects(props) {
         >
           <p>Check it out!</p>
           <div>
-            <button>github</button>
+            <button
+              onClick={e =>
+                window.open(
+                  "https://github.com/appraiserbff-lambda-build-week",
+                  "_blank"
+                )
+              }
+            >
+              github
+            </button>
             <button>live site</button>
           </div>
         </HoverProject>
@@ -84,6 +140,18 @@ function Projects(props) {
           </div>
         </ProjectCover>
       </Project>
+      <ProjectDiscription>
+        <p>
+          AppraiserBFF is and application I build during my Lambda School front
+          end curriculum. Similar to tip ease, this was a 4 week sprint project.
+          I worked along side one other front end developer, as well ass a back
+          end developer and 2 data scientists to create an application which
+          will find the information on your house, then respond back with an
+          estimate based on local housing prices. It was built using React/redux
+          and Node/express.
+        </p>
+      </ProjectDiscription>
+
       <Project style={{ backgroundImage: `url(${Portfolio})` }}>
         <HoverProject
           onMouseEnter={e => setPorfolio(true)}
@@ -92,7 +160,16 @@ function Projects(props) {
         >
           <p>Check it out!</p>
           <div>
-            <button>github</button>
+            <button
+              onClick={e =>
+                window.open(
+                  "https://github.com/TomHessburg/My-Portfolio",
+                  "_blank"
+                )
+              }
+            >
+              github
+            </button>
           </div>
         </HoverProject>
         <ProjectCover>
@@ -105,6 +182,12 @@ function Projects(props) {
           </div>
         </ProjectCover>
       </Project>
+      <ProjectDiscription>
+        <p>
+          I had a LOT of fun writing this portfolio website. If youd like to
+          check out the code, feel free to take a look on github!
+        </p>
+      </ProjectDiscription>
     </PortfolioWrapper>
   );
 }
@@ -114,7 +197,7 @@ export default Projects;
 const PortfolioWrapper = styled.div`
   width: 100vw;
   padding: 0 55px 50px 55px;
-  @media (max-width: 650px) {
+  @media (max-width: 850px) {
     padding: 0;
   }
   background-image: url(${BGImg});
@@ -129,7 +212,7 @@ const PortfolioWrapper = styled.div`
 `;
 
 const Project = styled.div`
-  margin: 30px auto;
+  margin: 30px auto 0 auto;
   box-sizing: border-box;
   width: 90vw;
   max-width: 1000px;
@@ -150,39 +233,43 @@ const HoverProject = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
-  background: black;
+  background: #333333;
   z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   font-family: "Montserrat", sans-serif;
-
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   p {
     font-size: 34px;
     font-weight: 800px;
     color: white;
     margin: 0;
+    @media (max-width: 600px) {
+      font-size: 28px;
+    }
   }
-
   button {
     cursor: pointer;
     width: 155px;
     height: 40px;
     margin: 10px;
+    color: white;
+    font-size: 20px;
+    opacity: 1;
+    @media (max-width: 600px) {
+      width: 105px;
+      height: 30px;
+    }
     &:nth-child(1) {
       background: #19ab33;
       border: 2px solid #19ab33;
     }
     &:nth-child(2) {
-      color: #19ab33;
-      background: white;
-      border: 2px solid white;
-      font-weight: 400;
+      background: #19ab33;
+      border: 2px solid #19ab33;
     }
-    color: white;
-    font-size: 20px;
-    opacity: 1;
   }
 `;
 const ProjectCover = styled.div`
@@ -202,7 +289,8 @@ const ProjectCover = styled.div`
   div {
     width: 80%;
     padding: 60px 0;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.99);
+    border: 1px solid black;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -214,11 +302,32 @@ const ProjectCover = styled.div`
       font-size: 35px;
       font-weight: 400;
       margin: 0;
+      @media (max-width: 650px) {
+        font-size: 28px;
+      }
     }
     p {
       color: black;
       padding: 0 20px;
       font-weight: 400;
+      @media (max-width: 650px) {
+        font-size: 14px;
+      }
     }
+  }
+`;
+
+const ProjectDiscription = styled.div`
+  margin: 0 auto 30px auto;
+  box-sizing: border-box;
+  width: 80vw;
+  max-width: 900px;
+  min-height: 100px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.05);
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  p {
+    font-size: 18px;
   }
 `;

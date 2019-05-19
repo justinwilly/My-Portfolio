@@ -242,8 +242,7 @@ const AboutMeDecals = styled.div`
   }
   h3 {
     font-size: 25px;
-    font-weight: 100;
-    text-decoration: underline;
+    font-weight: 400;
   }
 `;
 

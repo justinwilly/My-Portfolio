@@ -5,10 +5,60 @@ export default function NavBar(props) {
   return (
     <AppBar>
       <ul>
-        <li>home</li>
-        <li>about me</li>
-        <li>portfolio</li>
-        <li>contact</li>
+        <li
+          onClick={e => {
+            console.log(window.innerWidth);
+            window.scrollTo({
+              // a reminder on why i did this for future me: can definitely just use normal refs, but using scrollTo is a lot more flexibile.
+              top: 0,
+              left: 0,
+              behavior: "smooth"
+            });
+          }}
+        >
+          home
+        </li>
+        <li
+          onClick={e => {
+            window.scrollTo({
+              top: window.innerHeight + 100,
+              left: 0,
+              behavior: "smooth"
+            });
+          }}
+        >
+          about me
+        </li>
+        <li
+          onClick={e => {
+            window.scrollTo(
+              window.innerWidth > 900
+                ? {
+                    top: window.innerHeight * 2 + 300,
+                    left: 0,
+                    behavior: "smooth"
+                  }
+                : {
+                    top: window.innerHeight * 3 + 400,
+                    left: 0,
+                    behavior: "smooth"
+                  }
+            );
+          }}
+        >
+          portfolio
+        </li>
+        <li
+          onClick={e => {
+            window.scrollTo({
+              top: 100000,
+              left: 0,
+              behavior: "smooth"
+            });
+          }}
+        >
+          contact
+        </li>
       </ul>
     </AppBar>
   );

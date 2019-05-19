@@ -7,7 +7,7 @@ export default function Contact() {
 
 const ContactWrapper = styled.div`
     width: 100vw;
-    height: 350px;
-    background: black;
+    height: 250px;
+    background: #333333;
     color; white;
 `;
