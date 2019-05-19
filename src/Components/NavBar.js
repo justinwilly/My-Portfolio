@@ -7,7 +7,6 @@ export default function NavBar(props) {
       <ul>
         <li
           onClick={e => {
-            console.log(window.innerWidth);
             window.scrollTo({
               // a reminder on why i did this for future me: can definitely just use normal refs, but using scrollTo is a lot more flexibile.
               top: 0,
