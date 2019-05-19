@@ -18,6 +18,11 @@ export default function AboutMe() {
       <AboutMeInfo>
         <h2>About Me</h2>
         <hr />
+        <Slogan>
+          "...Persistence and determination alone are omnipotent. The slogan
+          Press On! has solved and always will solve the problems of the human
+          race...” <br />- Calvin Cooldige
+        </Slogan>
         <AboutMeWrapper>
           <AboutMeText>
             <p>
@@ -310,5 +315,19 @@ const PopOver = styled.div`
   cursor: default;
   p {
     cursor: default;
+  }
+`;
+
+const Slogan = styled.p`
+  font-size: 17px;
+  font-weight: 400;
+  font-style: italic;
+  margin: 10px auto 20px;
+  width: 90%;
+  max-width: 700px;
+  font-family: "Montserrat", sans-serif;
+  @media (max-width: 900px) {
+    font-size: 14px;
+    margin-bottom: 0;
   }
 `;

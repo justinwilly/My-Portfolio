@@ -143,12 +143,12 @@ export default function HeroSection() {
                   window.scrollTo(
                     window.innerWidth > 900
                       ? {
-                          top: window.innerHeight * 2 + 300,
+                          top: window.innerHeight * 2 + 700,
                           left: 0,
                           behavior: "smooth"
                         }
                       : {
-                          top: window.innerHeight * 3 + 400,
+                          top: window.innerHeight * 3 + 800,
                           left: 0,
                           behavior: "smooth"
                         }
@@ -175,7 +175,7 @@ export default function HeroSection() {
           <i className="fab fa-github" />
         </a>
         <a
-          href="https://www.linkedin.com/in/thomas-hessburg-596948180/"
+          href="https://www.linkedin.com/in/thomas-hessburg/"
           target="_blank"
           rel="noopener noreferrer"
         >

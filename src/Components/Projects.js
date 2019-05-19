@@ -38,7 +38,13 @@ function Projects(props) {
             >
               github
             </button>
-            <button>live site</button>
+            <button
+              onClick={e =>
+                window.open("https://training-bot-2.netlify.com/", "_blank")
+              }
+            >
+              live site
+            </button>
           </div>
         </HoverProject>
         <ProjectCover>
@@ -82,7 +88,13 @@ function Projects(props) {
             >
               github
             </button>
-            <button>live site</button>
+            {/* <button
+              onClick={e =>
+                window.open("https://training-bot-2.netlify.com/", "_blank")
+              }
+            >
+              live site
+            </button> */}
           </div>
         </HoverProject>
         <ProjectCover>
@@ -127,7 +139,7 @@ function Projects(props) {
             >
               github
             </button>
-            <button>live site</button>
+            {/* <button>live site</button> */}
           </div>
         </HoverProject>
         <ProjectCover>
@@ -176,8 +188,7 @@ function Projects(props) {
           <div>
             <h3>Portfolio</h3>
             <p>
-              You're looking at it! I had a fantastic time building this
-              portfolio site, and I hope you love it as much as I do!
+              You're looking at it! Built using React with styled components.
             </p>
           </div>
         </ProjectCover>
@@ -198,7 +209,7 @@ const PortfolioWrapper = styled.div`
   width: 100vw;
   padding: 0 55px 50px 55px;
   @media (max-width: 850px) {
-    padding: 0;
+    padding: 0 0 50px 0;
   }
   background-image: url(${BGImg});
   font-family: "Montserrat", sans-serif;
@@ -267,8 +278,9 @@ const HoverProject = styled.div`
       border: 2px solid #19ab33;
     }
     &:nth-child(2) {
-      background: #19ab33;
-      border: 2px solid #19ab33;
+      background: white;
+      border: 2px solid white;
+      color: #19ab33;
     }
   }
 `;
