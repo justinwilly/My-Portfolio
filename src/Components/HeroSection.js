@@ -121,7 +121,7 @@ export default function HeroSection() {
   const [hidden, setHidden] = useState(false);
 
   return (
-    <Parallax speed={4}>
+    <Parallax speed={2}>
       <HeroWrapper>
         <Hero>
           <h1>Thomas Hessburg</h1>

@@ -21,7 +21,7 @@ export default function AboutMe() {
         <Slogan>
           "...Persistence and determination alone are omnipotent. The slogan
           Press On! has solved and always will solve the problems of the human
-          race...” <br />- Calvin Cooldige
+          race...” <br />- Calvin Coolidge
         </Slogan>
         <AboutMeWrapper>
           <AboutMeText>
@@ -186,8 +186,8 @@ const AboutMeStripe = styled.div`
   padding: 100px 40px;
   padding-bottom: 100px;
   width: 100vw;
-  background: black;
-  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%);
+  background: #343434;
+  clip-path: polygon(0 0, 100% 8%, 100% 100%, 0 100%);
   color: white;
   @media (max-width: 900px) {
     clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);
