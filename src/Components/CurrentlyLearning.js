@@ -29,7 +29,7 @@ function CurrentlyLearning() {
 
 const CLWrapper = styled.div`
   width: 100vw;
-  height: 400px;
+  min-height: 400px;
   background: #f53b54;
   padding-bottom: 20px;
   font-family: "Montserrat", sans-serif;
