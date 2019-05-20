@@ -232,7 +232,7 @@ const Hero = styled.div`
   background: rgba(18%, 22%, 31%, 0.8);
   color: white;
   h1 {
-    font-family: "Cormorant Unicase", serif;
+    ont-family: "Montserrat", sans-serif;
     font-weight: 200;
     padding: 30vh 0 0 0;
     margin: 0;
@@ -252,7 +252,7 @@ const Hero = styled.div`
     }
   }
   h2 {
-    font-family: "Cormorant Unicase", serif;
+    ont-family: "Montserrat", sans-serif;
     font-size: 40px;
     font-weight: 300;
     margin: 0;

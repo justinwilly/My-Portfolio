@@ -262,10 +262,16 @@ const AboutMeDecals = styled.div`
   }
   i {
     font-size: 75px;
+    @media (max-width: 650px) {
+      font-size: 50px;
+    }
   }
   h3 {
     font-size: 25px;
     font-weight: 400;
+    @media (max-width: 650px) {
+      font-size: 20px;
+    }
   }
 `;
 
@@ -287,6 +293,9 @@ const TechnologyEven = styled.div`
   background: rgba(0, 0, 0, 0.03);
   padding: 5px 80px;
   font-weight: 400;
+  @media (max-width: 650px) {
+    padding: 5px 40px;
+  }
   div {
     display: flex;
     flex-direction: column;
@@ -308,6 +317,9 @@ const TechnologyOdd = styled.div`
   background: rgba(0, 0, 0, 0.09);
   padding: 5px 80px;
   font-weight: 400;
+  @media (max-width: 650px) {
+    padding: 5px 40px;
+  }
   div {
     display: flex;
     flex-direction: column;
