@@ -33,6 +33,9 @@ const CLWrapper = styled.div`
   background: #f53b54;
   padding-bottom: 20px;
   font-family: "Montserrat", sans-serif;
+  @media (max-width: 900px) {
+    padding-bottom: 40px;
+  }
   h2 {
     margin: 0 auto 10px auto;
     padding: 30px 10px;
@@ -54,6 +57,9 @@ const CLWrapper = styled.div`
       font-size: 20px;
       font-weight: 400;
       list-style-type: square;
+      @media (max-width: 900px) {
+        font-size: 16px;
+      }
     }
   }
   p {
