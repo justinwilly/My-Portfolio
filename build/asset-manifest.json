@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1e5700bb.chunk.css",
+    "main.js": "/static/js/main.b825cd79.chunk.js",
+    "main.js.map": "/static/js/main.b825cd79.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/js/2.f92f8c43.chunk.js": "/static/js/2.f92f8c43.chunk.js",
+    "static/js/2.f92f8c43.chunk.js.map": "/static/js/2.f92f8c43.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.567f5e1da0c1e5e90b2ffe6d922e91c4.js": "/precache-manifest.567f5e1da0c1e5e90b2ffe6d922e91c4.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.1e5700bb.chunk.css.map": "/static/css/main.1e5700bb.chunk.css.map",
+    "static/media/appbff2.png": "/static/media/appbff2.8916a484.png",
+    "static/media/baron14.jpg": "/static/media/baron14.4cfe852e.jpg",
+    "static/media/codeimage4.jpeg": "/static/media/codeimage4.ea32f887.jpeg",
+    "static/media/debut_light.png": "/static/media/debut_light.b70048d2.png",
+    "static/media/ep_naturalblack.png": "/static/media/ep_naturalblack.23e2b6cf.png",
+    "static/media/index.css": "/static/media/pipes.41310c25.png",
+    "static/media/tipeasepic.png": "/static/media/tipeasepic.7190dadc.png",
+    "static/media/trainingbot3.png": "/static/media/trainingbot3.7185c38e.png"
+  }
+}
