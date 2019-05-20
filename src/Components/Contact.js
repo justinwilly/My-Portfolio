@@ -1,20 +1,76 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import axios from "axios";
 
 export default function Contact() {
+  //form fields
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [content, setContent] = useState("");
 
+  //form feedback
+  const [success, setSuccess] = useState(false);
+  const [fail, setFail] = useState(false);
+  const [incomplete, setIncomplete] = useState(false);
+
+  const handelEmail = succeeded => {
+    if (succeeded) {
+      setSuccess(true);
+    } else {
+      setFail(true);
+    }
+  };
+
   return (
     <ContactWrapper>
+      {success && (
+        <MsgSuccess
+          onClick={e => {
+            setSuccess(false);
+          }}
+        >
+          <button>x</button>
+          <p>successfully sent your message!</p>
+        </MsgSuccess>
+      )}
+      {fail && (
+        <MsgFail
+          onClick={e => {
+            setFail(false);
+          }}
+        >
+          <button>x</button>
+          <p>
+            hmmm... unfortunately I wasnt able to process this message. Might be
+            a slight bug on my end. You can try again, or check out my email
+            directly below!
+          </p>
+        </MsgFail>
+      )}
+      {incomplete && (
+        <MsgIncomplete
+          onClick={e => {
+            setIncomplete(false);
+          }}
+        >
+          <button>x</button>
+          <p>
+            Looks like you missed a couple things! Please provide at least a
+            name, email, and some content so that I know who you are.
+          </p>
+        </MsgIncomplete>
+      )}
+
       <ContactMe>
         <h3>Contact me!</h3>
         <form
           onSubmit={e => {
             e.preventDefault();
+            if (!name || !email || !content) {
+              setIncomplete(true);
+              return;
+            }
 
             const newEmail = {
               name,
@@ -29,12 +85,16 @@ export default function Contact() {
                 setSubject("");
                 setName("");
                 setEmail("");
+
+                handelEmail(true);
               })
-              .catch(err => console.log(err));
+              .catch(err => handelEmail(false));
           }}
           type="submit"
         >
-          <label>name</label>
+          <label>
+            name <span>*</span>
+          </label>
           <input
             value={name}
             onChange={e => setName(e.target.value)}
@@ -42,7 +102,9 @@ export default function Contact() {
             placeholder="name"
           />
 
-          <label>e-mail</label>
+          <label>
+            e-mail <span>*</span>
+          </label>
           <input
             value={email}
             onChange={e => setEmail(e.target.value)}
@@ -58,7 +120,9 @@ export default function Contact() {
             placeholder="subject"
           />
 
-          <label>content</label>
+          <label>
+            content <span>*</span>
+          </label>
           <textarea
             value={content}
             onChange={e => setContent(e.target.value)}
@@ -154,5 +218,98 @@ const ContactMe = styled.div`
       cursor: pointer;
       background: #1cac35;
     }
+  }
+`;
+
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+    left: -100px
+  }
+  100% {
+    opacity: 1;
+    left: 10px;
+  }
+`;
+
+const MsgSuccess = styled.div`
+  width: 350px;
+  height: 100px;
+  color: white;
+  background: #1cac35;
+  position: fixed;
+  bottom: 100px;
+  left: 10px;
+  animation: 0.5s ${fadeIn} ease-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: white;
+    background: transparent;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+  }
+`;
+
+const MsgFail = styled.div`
+  width: 350px;
+  height: 100px;
+  color: white;
+  background: #db3830;
+  padding: 20px;
+  position: fixed;
+  bottom: 100px;
+  left: 10px;
+  animation: 0.5s ${fadeIn} ease-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: white;
+    background: transparent;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+  }
+`;
+const MsgIncomplete = styled.div`
+  width: 350px;
+  height: 100px;
+  color: white;
+  background: #1d40aa;
+  padding: 20px;
+  position: fixed;
+  bottom: 100px;
+  left: 10px;
+  animation: 0.5s ${fadeIn} ease-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: white;
+    background: transparent;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
   }
 `;
