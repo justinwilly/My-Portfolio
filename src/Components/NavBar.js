@@ -56,7 +56,7 @@ export default function NavBar(props) {
                   behavior: "smooth"
                 })
               : window.scrollTo({
-                  top: 4800,
+                  top: 5500,
                   left: 0,
                   behavior: "smooth"
                 });

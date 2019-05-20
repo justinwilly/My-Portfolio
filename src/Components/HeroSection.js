@@ -232,7 +232,7 @@ const Hero = styled.div`
   background: rgba(18%, 22%, 31%, 0.8);
   color: white;
   h1 {
-    ont-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 200;
     padding: 30vh 0 0 0;
     margin: 0;
@@ -252,7 +252,7 @@ const Hero = styled.div`
     }
   }
   h2 {
-    ont-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 40px;
     font-weight: 300;
     margin: 0;
@@ -280,7 +280,7 @@ const Hero = styled.div`
     height: 45px;
     margin: 15px;
     position: relative;
-    z-index: 3;
+    z-index: 2;
     animation: TEXT-FADE 4s ease;
     &:hover {
       background: #f53b54;

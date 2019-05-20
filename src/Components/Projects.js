@@ -75,6 +75,28 @@ function Projects(props) {
           stack, implementing features on both the front end and the back end,
           as well as conducted user testing and more.
         </p>
+        <MobileLinks>
+          <p>
+            github:{" "}
+            <a
+              href="https://github.com/labs12-training-bot-2"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              https://github.com/labs12-training-bot-2
+            </a>
+          </p>
+          <p>
+            live site:{" "}
+            <a
+              href="https://github.com/labs12-training-bot-2"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              https://training-bot-2.netlify.com/
+            </a>
+          </p>
+        </MobileLinks>
       </ProjectDiscription>
 
       <Project style={{ backgroundImage: `url(${TipEasePic})` }}>
@@ -125,6 +147,18 @@ function Projects(props) {
           sircumstances, our web application wasnt completed by the student
           tasked to complete it, so I took the time myself to build out the
           front end that you see here as well!
+          <MobileLinks>
+            <p>
+              github:{" "}
+              <a
+                href="https://github.com/lambda-build-tipsease"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://github.com/lambda-build-tipsease
+              </a>
+            </p>
+          </MobileLinks>
         </p>
       </ProjectDiscription>
 
@@ -169,6 +203,18 @@ function Projects(props) {
           estimate based on local housing prices. It was built using React/redux
           and Node/express.
         </p>
+        <MobileLinks>
+          <p>
+            github:{" "}
+            <a
+              href="https://github.com/appraiserbff-lambda-build-week"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              https://github.com/appraiserbff-lambda-build-week
+            </a>
+          </p>
+        </MobileLinks>
       </ProjectDiscription>
 
       <Project style={{ backgroundImage: `url(${Portfolio})` }}>
@@ -205,6 +251,18 @@ function Projects(props) {
           I had a LOT of fun writing this portfolio website. If youd like to
           check out the code, feel free to take a look on github!
         </p>
+        <MobileLinks>
+          <p>
+            github:{" "}
+            <a
+              href="https://github.com/TomHessburg/My-Portfolio"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              https://github.com/TomHessburg/My-Portfolio
+            </a>
+          </p>
+        </MobileLinks>
       </ProjectDiscription>
     </PortfolioWrapper>
   );
@@ -348,5 +406,15 @@ const ProjectDiscription = styled.div`
   font-family: "Montserrat", sans-serif;
   p {
     font-size: 16px;
+  }
+`;
+
+const MobileLinks = styled.div`
+  display: none;
+  @media (max-width: 650px) {
+    display: block;
+  }
+  a {
+    color: blue;
   }
 `;
