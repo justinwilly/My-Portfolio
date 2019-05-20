@@ -49,11 +49,17 @@ export default function NavBar(props) {
         </li>
         <li
           onClick={e => {
-            window.scrollTo({
-              top: 100000,
-              left: 0,
-              behavior: "smooth"
-            });
+            window.innerWidth > 900
+              ? window.scrollTo({
+                  top: 4500,
+                  left: 0,
+                  behavior: "smooth"
+                })
+              : window.scrollTo({
+                  top: 4800,
+                  left: 0,
+                  behavior: "smooth"
+                });
           }}
         >
           contact

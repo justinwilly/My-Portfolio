@@ -1,13 +1,20 @@
 import React from "react";
-
+import { useInView } from "react-intersection-observer";
 import styled from "styled-components";
+import styles from "./HoverFx.module.scss";
 
 function CurrentlyLearning() {
+  const [ref, inView] = useInView({
+    threshold: 0
+  });
+
   return (
     <CLWrapper>
-      <h2>I'm currently learning...</h2>
-      <div>
-        <ul>
+      <h2 className={inView ? styles.fadeInText : styles.fadeOutText}>
+        I'm currently learning...
+      </h2>
+      <div className={inView ? styles.fadeInText : styles.fadeOutText}>
+        <ul ref={ref}>
           <li>GraphQL</li>
           <li>AWS</li>
           <li>Advanced Node JS Concepts</li>

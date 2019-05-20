@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 import styles from "./HoverFx.module.scss";
+import { useInView } from "react-intersection-observer";
 
 import BGImg from "../images/debut_light.png";
 import TrainingBotPic from "../images/trainingbot3.png";
@@ -15,9 +16,15 @@ function Projects(props) {
   const [appBff, setAppBff] = useState(false);
   const [portfolio, setPorfolio] = useState(false);
 
+  const [ref, inView] = useInView({
+    threshold: 0
+  });
+
   return (
     <PortfolioWrapper>
-      <h2>Recent Projects</h2>
+      <h2 ref={ref} className={inView ? styles.fadeInText : styles.fadeOutText}>
+        Recent Projects
+      </h2>
       <hr style={{ marginBottom: "60px" }} />
 
       <Project style={{ backgroundImage: `url(${TrainingBotPic})` }}>

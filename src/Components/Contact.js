@@ -1,5 +1,8 @@
 import React, { useState } from "react";
+
 import styled, { keyframes } from "styled-components";
+import styles from "./HoverFx.module.scss";
+import { useInView } from "react-intersection-observer";
 import axios from "axios";
 
 export default function Contact() {
@@ -13,6 +16,11 @@ export default function Contact() {
   const [success, setSuccess] = useState(false);
   const [fail, setFail] = useState(false);
   const [incomplete, setIncomplete] = useState(false);
+
+  //scroll ref hook
+  const [ref, inView] = useInView({
+    threshold: 0
+  });
 
   const handelEmail = succeeded => {
     if (succeeded) {
@@ -63,8 +71,12 @@ export default function Contact() {
       )}
 
       <ContactMe>
-        <h3>Contact me!</h3>
+        <h3 className={inView ? styles.fadeInText : styles.fadeOutText}>
+          Contact me!
+        </h3>
         <form
+          ref={ref}
+          className={inView ? styles.fadeInText : styles.fadeOutText}
           onSubmit={e => {
             e.preventDefault();
             if (!name || !email || !content) {
@@ -79,7 +91,11 @@ export default function Contact() {
               content
             };
             axios
-              .post("http://localhost:5000/api/send-email", newEmail)
+              .post(
+                `${process.env.REACT_APP_DB_URL ||
+                  "http://localhost:5000"}/api/send-email`,
+                newEmail
+              )
               .then(res => {
                 setContent("");
                 setSubject("");

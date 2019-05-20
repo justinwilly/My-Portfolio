@@ -3,6 +3,8 @@ import styled from "styled-components";
 import BGTexture from "../images/ep_naturalblack.png";
 import styles from "./HoverFx.module.scss";
 
+import { useInView } from "react-intersection-observer";
+
 export default function AboutMe() {
   const [css, setCss] = useState(false);
   const [html, setHtml] = useState(false);
@@ -13,19 +15,35 @@ export default function AboutMe() {
   const [adobe, setAdobe] = useState(false);
   const [git, setGit] = useState(false);
 
+  //ref for page position
+  const [ref, inView] = useInView({
+    threshold: 0
+  });
+  const [textRef, texInView] = useInView({
+    threshold: 0
+  });
+
   return (
     <AboutMeStripe style={{ backgroundImage: `url(${BGTexture})` }}>
       <AboutMeInfo>
-        <h2>About Me</h2>
+        <h2
+          className={inView ? styles.fadeInText : styles.fadeOutText}
+          ref={ref}
+        >
+          About Me
+        </h2>
         <hr />
-        <Slogan>
+        <Slogan className={inView ? styles.fadeInText : styles.fadeOutText}>
           "...Persistence and determination alone are omnipotent. The slogan
           Press On! has solved and always will solve the problems of the human
           race...” <br />- Calvin Coolidge
         </Slogan>
         <AboutMeWrapper>
           <AboutMeText>
-            <p>
+            <p
+              ref={textRef}
+              className={texInView ? styles.fadeInText : styles.fadeOutText}
+            >
               <span>Hi, everyone!</span> <br /> <br /> My name is Thomas
               Hessburg, and I'm a full stack software developer from Orlando,
               Florida. I love to create, and I'm excited to learn and grow in
