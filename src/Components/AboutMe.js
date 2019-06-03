@@ -43,23 +43,30 @@ export default function AboutMe() {
             <p
               ref={textRef}
               className={texInView ? styles.fadeInText : styles.fadeOutText}
+              style={{ fontWeight: 400 }}
             >
               <span>Hi, everyone!</span> <br /> <br /> My name is Thomas
-              Hessburg, and I'm a full stack software developer from Orlando,
-              Florida. I love to create, and I'm excited to learn and grow in
-              the tech field. <br />
+              Hessburg and I'm a full stack software developer from Orlando,
+              Florida. I love to create and I'm excited to learn and grow in the
+              tech field. <br />
               <br />
-              After spending the past several years working as a
-              welder/fabricator all around the country, as well as working for
-              myself as an audio engineer writing and mixing music for
-              bands/music groups, I've decided to take on a new challenge in
-              learning to create software. I began my journey in mid-2018 by
-              picking up some books/courses on JavaScript and spending 12 hour
-              days trying to learn EVERYTHING that I possibly could. Come early
-              2019, I began attending Lambda School, an online, fully immersive,
-              30+ week dev bootcamp. I can proudly say that after over half a
-              year and over 1,000 hours, I'm ready to make my move into the
-              workforce. I would love to bring my talents to your company!
+              Over the past several years I've worked in two fields: as a
+              welder/fabricator all around the country, and for myself as an
+              audio engineer. As the latter, I wrote and mixed hundreds of songs
+              for bands and music groups. However, I've found my true passion in
+              learning to create software.
+              <br />
+              <br /> I began my journey in mid-2018 with JavaScript by picking
+              up some books, courses, and anything else I could get my hands on.
+              I spent 12 hours a day trying to learn EVERYTHING that I possibly
+              could and accelerate my learning as much as possible. By early
+              2019, I began attending Lambda School (an online, fully immersive,
+              30+ week full stack bootcamp).
+              <br />
+              <br /> I can proudly say that after more than a half a year and
+              1,000 hours of study, I'm ready to make my move into the
+              workforce. I would love to discuss how my talents may fit with
+              your company!
             </p>
           </AboutMeText>
 

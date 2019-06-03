@@ -67,13 +67,12 @@ function Projects(props) {
       <ProjectDiscription>
         <p>
           Training Bot was the capstone project for Lambda Schools main
-          curriculum that I built. The team consisted of myself, as well as four
-          other Lambda Students. It was built over the course of 5 weeks, and
-          included technologies such as React/Redux, Node/express with a
-          Postgres database, Stipe/Twillio/Sendgrid/Slack API's, Auth0 for
-          authentication, and Material UI design. I assisted in the entire
-          stack, implementing features on both the front end and the back end,
-          as well as conducted user testing and more.
+          curriculum that I built. I worked with four other Lambda Students and
+          took over this project to expand its features over the course of 5
+          weeks. Technologies used include: React/Redux, Node.js/Express,
+          PostgreSQL, Stripe/Twilio/SendGrid/Slack API, Auth0, and Material UI.
+          I assisted in the entire stack by implementing features on both the
+          front and back end, conducted user testing, and more.
         </p>
         <MobileLinks>
           <p>
@@ -138,15 +137,14 @@ function Projects(props) {
       <ProjectDiscription>
         <p>
           tipEase is an application that I built during my Lambda School back
-          end curriculum. It's an application that aims to helps service workers
-          by letting them recieve tips directly from customers, as opposed to
-          going through their employer. This was a four day sprint project, in
-          which I was tasked to build the back end using node/express and
-          postgres. I worked along side an android developer and a front end
-          architect in order to build the application. Due to unforseen
-          sircumstances, our web application wasnt completed by the student
-          tasked to complete it, so I took the time myself to build out the
-          front end that you see here as well!
+          end curriculum. The goal of the project was to simplify tipping in the
+          service industry by enabling customers to tip employees directly as
+          opposed to having to go through their employer. Collaborating with an
+          Android and React developer, I built the back end using
+          Node.js/Express with PostgreSQL in a four day development cycle. Due
+          to a personal emergency with our front end developer, our React
+          application wasn't built as intended. However, I took the mantle and
+          built the front end that you see here as well!
           <MobileLinks>
             <p>
               github:{" "}
@@ -195,13 +193,14 @@ function Projects(props) {
       </Project>
       <ProjectDiscription>
         <p>
-          AppraiserBFF is and application I build during my Lambda School front
-          end curriculum. Similar to tip ease, this was a 4 week sprint project.
-          I worked along side one other front end developer, as well ass a back
-          end developer and 2 data scientists to create an application which
-          will find the information on your house, then respond back with an
-          estimate based on local housing prices. It was built using React/redux
-          and Node/express.
+          I built AppraiserBFF during my front end curriculum build week at
+          Lambda School. Similar to tipEase this was also a four day project,
+          though this time I worked alongside another front end developer. Also
+          on our team were 2 data scientists and a back end developer.
+          AppraiserBFF allows users to quickly query information about their
+          house through the Zillow API then use an algorithm from our data
+          scientists to estimate its value. Our front end tech stack included:
+          React, Redux, React Router, Connected Router, and Node-Sass.
         </p>
         <MobileLinks>
           <p>
@@ -406,6 +405,7 @@ const ProjectDiscription = styled.div`
   font-family: "Montserrat", sans-serif;
   p {
     font-size: 16px;
+    font-weight: 400;
   }
 `;
 
