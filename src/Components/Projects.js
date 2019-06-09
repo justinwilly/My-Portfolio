@@ -116,13 +116,13 @@ function Projects(props) {
             >
               github
             </button>
-            {/* <button
+            <button
               onClick={e =>
-                window.open("https://training-bot-2.netlify.com/", "_blank")
+                window.open("https://tipease.netlify.com/", "_blank")
               }
             >
               live site
-            </button> */}
+            </button>
           </div>
         </HoverProject>
         <ProjectCover>
@@ -154,6 +154,16 @@ function Projects(props) {
                 rel="noopener noreferrer"
               >
                 https://github.com/lambda-build-tipsease
+              </a>
+            </p>
+            <p>
+              live site:{" "}
+              <a
+                href="https://tipease.netlify.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://tipease.netlify.com/
               </a>
             </p>
           </MobileLinks>
@@ -411,7 +421,7 @@ const ProjectDiscription = styled.div`
 
 const MobileLinks = styled.div`
   display: none;
-  @media (max-width: 650px) {
+  @media (max-width: 850px) {
     display: block;
   }
   a {
