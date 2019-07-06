@@ -15,6 +15,7 @@ function Projects(props) {
   const [tipEase, setTipEase] = useState(false);
   const [appBff, setAppBff] = useState(false);
   const [portfolio, setPorfolio] = useState(false);
+  const [doorman, setDoorman] = useState(false);
 
   const [ref, inView] = useInView({
     threshold: 0
@@ -168,6 +169,69 @@ function Projects(props) {
             </p>
           </MobileLinks>
         </p>
+      </ProjectDiscription>
+      {/* new proj */}
+      <Project style={{ backgroundImage: `url(${Portfolio})` }}>
+        <HoverProject
+          onMouseEnter={e => setDoorman(true)}
+          onMouseLeave={e => setDoorman(false)}
+          className={doorman ? styles.popoverHover : styles.popoverHoverOut}
+        >
+          <p>Check it out!</p>
+          <div>
+            <button
+              onClick={e =>
+                window.open("https://github.com/notwrong/doorman", "_blank")
+              }
+            >
+              github
+            </button>
+            <button
+              onClick={e =>
+                window.open("https://doorman.notwrong.dev/", "_blank")
+              }
+            >
+              live site
+            </button>
+          </div>
+        </HoverProject>
+        <ProjectCover>
+          <div>
+            <h3>Doorman</h3>
+            <p>An application to handel your Github repo invitations!</p>
+          </div>
+        </ProjectCover>
+      </Project>
+      <ProjectDiscription>
+        <p>
+          Doorman is a project built over the course of 48 hours during Lambda
+          School's July 2019 Hackathon! If you frequently find yourself being
+          added to repositories as a collaborator, you know how tedious finding
+          and accepting the Github invite can be. We felt that too, and we built
+          this application to fix it!
+        </p>
+        <MobileLinks>
+          <p>
+            github:{" "}
+            <a
+              href="https://github.com/notwrong/doorman"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              https://github.com/notwrong/doorman
+            </a>
+          </p>
+          <p>
+            live site:{" "}
+            <a
+              href="https://doorman.notwrong.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              https://doorman.notwrong.dev/
+            </a>
+          </p>
+        </MobileLinks>
       </ProjectDiscription>
 
       <Project style={{ backgroundImage: `url(${AppraisersBFF})` }}>
