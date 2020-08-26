@@ -32,7 +32,7 @@ export default function Contact() {
 
   return (
     <ContactWrapper>
-      {success && (
+      {/* {success && (
         <MsgSuccess
           onClick={e => {
             setSuccess(false);
@@ -148,27 +148,27 @@ export default function Contact() {
 
           <button type="submit">Submit</button>
         </form>
-      </ContactMe>
-      <p>email: thomas.hessburg@gmail.com</p>
-      <p>phone: (352)-636-5809</p>
+      </ContactMe> */}
+      <p>email: jwilli756@gmail.com</p>
+      <p>phone: (717)-364-5222</p>
       <p>
         LinkedIn:{" "}
         <a
-          href="https://www.linkedin.com/in/thomas-hessburg/"
+          href="https://www.linkedin.com/in/justin-c-williams-/"
           rel="noopener noreferrer"
           target="_blank"
         >
-          https://www.linkedin.com/in/thomas-hessburg/
+          https://www.linkedin.com/in/justin-c-williams-/
         </a>
       </p>
       <p>
         GitHub:{" "}
         <a
-          href="https://github.com/TomHessburg/"
+          href="https://github.com/justinwilly"
           rel="noopener noreferrer"
           target="_blank"
         >
-          https://github.com/TomHessburg
+          https://github.com/justinwilly
         </a>
       </p>
     </ContactWrapper>

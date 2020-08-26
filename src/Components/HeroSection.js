@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 //import Typist from "react-typist";
-import BackgroundImg from "../images/baron14.jpg";
+import BackgroundImg from "../images/justinwilliams.jpg";
 import styled from "styled-components";
 import Parallax from "react-rellax";
 import Particles from "react-particles-js";
@@ -124,7 +124,7 @@ export default function HeroSection() {
     <Parallax speed={2}>
       <HeroWrapper>
         <Hero>
-          <h1>Thomas Hessburg</h1>
+          <h1>Justin Williams</h1>
           <h2>
             <span>Full Stack</span> Web Developer
           </h2>
@@ -168,43 +168,33 @@ export default function HeroSection() {
       </HeroWrapper>
       <Socials>
         <a
-          href="https://github.com/TomHessburg"
+        //GITHUB
+          href="https://github.com/justinwilly"
           rel="noopener noreferrer"
           target="_blank"
         >
           <i className="fab fa-github" />
         </a>
         <a
-          href="https://www.linkedin.com/in/thomas-hessburg/"
+        //LINKEDIN
+          href="https://www.linkedin.com/in/justin-c-williams-/"
           target="_blank"
           rel="noopener noreferrer"
         >
           <i className="fab fa-linkedin" />
         </a>
         <a
-          href="https://twitter.com/HessburgThomas"
+        //TWITTER
+          href="https://twitter.com/justin_willy"
           rel="noopener noreferrer"
           target="_blank"
         >
           <i className="fab fa-twitter" />
         </a>
-        {/* <a
-          href="https://twitter.com/HessburgThomas"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <i className="fab fa-twitter" />
-        </a>
-        <a
-          href="https://www.facebook.com/tommy.hessburg"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <i className="fab fa-facebook-square" />
-        </a> */}
         <i
           onClick={e => {
-            window.location.href = "mailto:thomas.hessburg@gmail.com";
+            //EMAIL
+            window.location.href = "mailto:jwilli756@gmail.com"; 
           }}
           className="fas fa-envelope-open"
         />
@@ -222,7 +212,7 @@ const HeroWrapper = styled.div`
   background-position: center;
   background-color: black;
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.4);
-  opactiy: 0.4;
+  /* opactiy: 0.4; */
 `;
 
 const Hero = styled.div`
@@ -234,7 +224,7 @@ const Hero = styled.div`
   h1 {
     font-family: "Montserrat", sans-serif;
     font-weight: 200;
-    padding: 30vh 0 0 0;
+    padding: 50vh 0 0 0;
     margin: 0;
     font-size: 100px;
     animation: TEXT-FADE 2.5s ease;
@@ -305,8 +295,7 @@ const HeroParticles = styled(Particles)`
   bottom: 0;
   left: 0;
   z-index: 1;
-  height; 100vh;
-
+  height: 100vh;
 `;
 
 const Socials = styled.div`
