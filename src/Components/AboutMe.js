@@ -48,10 +48,15 @@ export default function AboutMe() {
               <span>Hi, everyone!</span> <br /> <br /> My name is Justin Williams and I'm a full stack software developer from St. Augustine,
               Florida. I love to create and I'm excited to learn and grow in the
               tech field. <br />
+              <br />
+              Over the past several years I have worked as a web developer for a local business.  This opportunity presented it self as I graduated
+              after my bachelors degree and I decided "How hard could it be?" so I said "Yes".  Little did I know at that time I had just changed
+              the path of my life.  
+
+              <br />
               {/* <br />
-              Over the past several years I've worked in two fields: as a
-              welder/fabricator all around the country, and for myself as an
-              audio engineer. As the latter, I wrote and mixed hundreds of songs
+              Over the past several years I've worked as a
+              web developer for a local business in Orlando. As the latter, I wrote and mixed hundreds of songs
               for bands and music groups. However, I've found my true passion in
               learning to create software.
               <br />
@@ -220,7 +225,7 @@ const AboutMeStripe = styled.div`
 `;
 
 const AboutMeInfo = styled.div`
-  marign: auto;
+  /* marign: auto; */
   width: 100%;
   min-height: 300px;
   max-width: 1800px;
@@ -295,7 +300,7 @@ const TechnologyEven = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  magin: 10px auto;
+  /* magin: 10px auto; */
   background: rgba(0, 0, 0, 0.03);
   padding: 5px 80px;
   font-weight: 400;
@@ -319,7 +324,7 @@ const TechnologyOdd = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  magin: 10px auto;
+  /* magin: 10px auto; */
   background: rgba(0, 0, 0, 0.09);
   padding: 5px 80px;
   font-weight: 400;
