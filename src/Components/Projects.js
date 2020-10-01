@@ -5,10 +5,11 @@ import styles from "./HoverFx.module.scss";
 import { useInView } from "react-intersection-observer";
 
 import BGImg from "../images/debut_light.png";
-import TrainingBotPic from "../images/trainingbot3.png";
-import TipEasePic from "../images/tipeasepic.png";
-import AppraisersBFF from "../images/appbff2.png";
 import Portfolio from "../images/codeimage4.jpeg";
+import Refresh from "../images/refresh-leaderboard.png";
+import Huber from "../images/huber.png";
+import Rvbnb from "../images/rvbnb.png";
+import Foodie from "../images/foodie.png";
 
 function Projects(props) {
   const [trainingBot, setTrainingBot] = useState(false);
@@ -28,7 +29,10 @@ function Projects(props) {
       </h2>
       <hr style={{ marginBottom: "60px" }} />
 
-      <Project style={{ backgroundImage: `url(${TrainingBotPic})` }}>
+
+{/* #### APP: REFRESH ####### */}
+
+      <Project style={{ backgroundImage: `url(${Refresh})` }}>
         <HoverProject
           onMouseEnter={e => setTrainingBot(true)}
           onMouseLeave={e => setTrainingBot(false)}
@@ -39,7 +43,7 @@ function Projects(props) {
             <button
               onClick={e =>
                 window.open(
-                  "https://github.com/labs12-training-bot-2",
+                  "https://github.com/justinwilly/refresh-fe",
                   "_blank"
                 )
               }
@@ -48,7 +52,7 @@ function Projects(props) {
             </button>
             <button
               onClick={e =>
-                window.open("https://training-bot-2.netlify.com/", "_blank")
+                window.open("https://www.refresh-app.com/", "_blank")
               }
             >
               live site
@@ -57,49 +61,52 @@ function Projects(props) {
         </HoverProject>
         <ProjectCover>
           <div>
-            <h3>Training Bot</h3>
+            <h3>Refresh</h3>
             <p>
-              An application that utilizes Twillio, Sendgrid, and the Slack API
-              to allow managers to distribute training materials to employees.
+              An application that utilizes React, NodeJS, and AWS
+              thats helps managers promote healthy habits to their teams.
             </p>
           </div>
         </ProjectCover>
       </Project>
       <ProjectDiscription>
         <p>
-          Training Bot was the capstone project for Lambda Schools main
-          curriculum that I built. I worked with four other Lambda Students and
-          took over this project to expand its features over the course of 5
+          Refresh was the capstone project for Lambda Schools main
+          curriculum that I built. I worked with five other Lambda Students and
+          took over this project to expand its features over the course of 8
           weeks. Technologies used include: React/Redux, Node.js/Express,
-          PostgreSQL, Stripe/Twilio/SendGrid/Slack API, Auth0, and Material UI.
-          I assisted in the entire stack by implementing features on both the
-          front and back end, conducted user testing, and more.
+          PostgreSQL, Auth0, and Styled Components.
+          I assisted in the entire stack by implementing features on the
+          front end, and conducted user testing, and more.
         </p>
         <MobileLinks>
           <p>
             github:{" "}
             <a
-              href="https://github.com/labs12-training-bot-2"
+              href="https://www.refresh-app.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              https://github.com/labs12-training-bot-2
+              https://www.refresh-app.com/
             </a>
           </p>
           <p>
             live site:{" "}
             <a
-              href="https://github.com/labs12-training-bot-2"
+              href="https://github.com/justinwilly/refresh-fe"
               target="_blank"
               rel="noopener noreferrer"
             >
-              https://training-bot-2.netlify.com/
+              https://github.com/justinwilly/refresh-fe
             </a>
           </p>
         </MobileLinks>
       </ProjectDiscription>
 
-      <Project style={{ backgroundImage: `url(${TipEasePic})` }}>
+
+{/* #### APP: HUBER ####### */}
+
+      <Project style={{ backgroundImage: `url(${Huber})` }}>
         <HoverProject
           onMouseEnter={e => setTipEase(true)}
           onMouseLeave={e => setTipEase(false)}
@@ -110,7 +117,7 @@ function Projects(props) {
             <button
               onClick={e =>
                 window.open(
-                  "https://github.com/lambda-build-tipsease",
+                  "https://github.com/justinwilly/portfolio-website/tree/gh-pages",
                   "_blank"
                 )
               }
@@ -119,7 +126,7 @@ function Projects(props) {
             </button>
             <button
               onClick={e =>
-                window.open("https://tipease.netlify.com/", "_blank")
+                window.open("https://hubernicolas.com/", "_blank")
               }
             >
               live site
@@ -128,50 +135,51 @@ function Projects(props) {
         </HoverProject>
         <ProjectCover>
           <div>
-            <h3>tipEase</h3>
+            <h3>Nicolas Huber</h3>
             <p>
-              An application that allows users to tip service workers directly!
+              A website for Olympic Swiss Snowboarder Nicolas Huber!
             </p>
           </div>
         </ProjectCover>
       </Project>
       <ProjectDiscription>
         <p>
-          tipEase is an application that I built during my Lambda School back
-          end curriculum. The goal of the project was to simplify tipping in the
-          service industry by enabling customers to tip employees directly as
-          opposed to having to go through their employer. Collaborating with an
-          Android and React developer, I built the back end using
-          Node.js/Express with PostgreSQL in a four day development cycle. Due
-          to a personal emergency with our front end developer, our React
-          application wasn't built as intended. However, I took the mantle and
-          built the front end that you see here as well!
+          Nicolas Huber is an Olympic Snowboarder that was in need of a personal website to promote himself.
+          The goal of the project was to show his love for snowboarding and show his appreciation for his fans and
+          sponsors. Collaborating with his manager and himself to come up with the perfect UI design,  I built the front end using HTML and CSS along with 
+          some Javascript. Due to a personal time restraints when building this I plan to overhaul the current 
+          website and rebuild in ReactJS. During this project I also had to learn how to effectively use Google Analytics,
+          Google Search Console and other SEO tools!
           <MobileLinks>
             <p>
               github:{" "}
               <a
-                href="https://github.com/lambda-build-tipsease"
+                href="https://github.com/justinwilly/portfolio-website/tree/gh-pages"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                https://github.com/lambda-build-tipsease
+                https://github.com/justinwilly/portfolio-website/tree/gh-pages
               </a>
             </p>
             <p>
               live site:{" "}
               <a
-                href="https://tipease.netlify.com/"
+                href="https://hubernicolas.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                https://tipease.netlify.com/
+                https://hubernicolas.com/
               </a>
             </p>
           </MobileLinks>
         </p>
       </ProjectDiscription>
-      {/* new proj */}
-      <Project style={{ backgroundImage: `url(${Portfolio})` }}>
+
+
+
+{/* #### APP: RVBNB ####### */}
+
+      <Project style={{ backgroundImage: `url(${Rvbnb})` }}>
         <HoverProject
           onMouseEnter={e => setDoorman(true)}
           onMouseLeave={e => setDoorman(false)}
@@ -181,14 +189,14 @@ function Projects(props) {
           <div>
             <button
               onClick={e =>
-                window.open("https://github.com/notwrong/doorman", "_blank")
+                window.open("https://github.com/bwft-RVcamping-Airbnb/Backend", "_blank")
               }
             >
               github
             </button>
             <button
               onClick={e =>
-                window.open("https://doorman.notwrong.dev/", "_blank")
+                window.open("https://rvairbnb.netlify.app/", "_blank")
               }
             >
               live site
@@ -197,44 +205,50 @@ function Projects(props) {
         </HoverProject>
         <ProjectCover>
           <div>
-            <h3>Doorman</h3>
-            <p>An application to handel your Github repo invitations!</p>
+            <h3>RV-bnb</h3>
+            <p>An application that allows RV owners to rent property from Land owners!</p>
           </div>
         </ProjectCover>
       </Project>
       <ProjectDiscription>
         <p>
-          Doorman is a project built over the course of 48 hours during Lambda
-          School's July 2019 Hackathon! If you frequently find yourself being
-          added to repositories as a collaborator, you know how tedious finding
-          and accepting the Github invite can be. We felt that too, and we built
-          this application to fix it!
+          Rv-bnb is an application built during my Lambda School back end curriculum build week at
+          . This was a four day project,
+          and I worked as the solo back end developer alongside my team
+          of 4 frond end developers.
+          RV-bnb allows users to quickly find information about
+          properties through the application then users reserve them for specific dates. 
+          My back end tech stack included:
+          Node.js/Express with PostgreSQL.
         </p>
         <MobileLinks>
           <p>
             github:{" "}
             <a
-              href="https://github.com/notwrong/doorman"
+              href="https://github.com/bwft-RVcamping-Airbnb/Backend"
               target="_blank"
               rel="noopener noreferrer"
             >
-              https://github.com/notwrong/doorman
+              https://github.com/bwft-RVcamping-Airbnb/Backend
             </a>
           </p>
           <p>
             live site:{" "}
             <a
-              href="https://doorman.notwrong.dev/"
+              href="https://rvairbnb.netlify.app/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              https://doorman.notwrong.dev/
+              https://rvairbnb.netlify.app/
             </a>
           </p>
         </MobileLinks>
       </ProjectDiscription>
 
-      <Project style={{ backgroundImage: `url(${AppraisersBFF})` }}>
+
+{/* #### APP: FOODIE ####### */}
+
+      <Project style={{ backgroundImage: `url(${Foodie})` }}>
         <HoverProject
           onMouseEnter={e => setAppBff(true)}
           onMouseLeave={e => setAppBff(false)}
@@ -245,50 +259,59 @@ function Projects(props) {
             <button
               onClick={e =>
                 window.open(
-                  "https://github.com/appraiserbff-lambda-build-week",
+                  "https://github.com/LS-Foodie-Fun6/Front-End",
                   "_blank"
                 )
               }
             >
               github
             </button>
-            {/* <button>live site</button> */}
+            <button
+              onClick={e =>
+                window.open("https://cranky-snyder-f61439.netlify.app/", "_blank")
+              }
+            >
+              live site
+            </button>
+            
           </div>
         </HoverProject>
         <ProjectCover>
           <div>
-            <h3>AppraisersBFF</h3>
+            <h3>Foodie Fun</h3>
             <p>
-              An application that uses machine learning and the Zillow API to
-              appraise your home!
+              A Food-Focused journaling application for eating out!
             </p>
           </div>
         </ProjectCover>
       </Project>
       <ProjectDiscription>
         <p>
-          I built AppraiserBFF during my front end curriculum build week at
-          Lambda School. Similar to tipEase this was also a four day project,
-          though this time I worked alongside another front end developer. Also
-          on our team were 2 data scientists and a back end developer.
-          AppraiserBFF allows users to quickly query information about their
-          house through the Zillow API then use an algorithm from our data
-          scientists to estimate its value. Our front end tech stack included:
-          React, Redux, React Router, Connected Router, and Node-Sass.
+          I built Foodie Fun during my front end curriculum build week at
+          Lambda School. Similar to Rvbnb this was also a four day project,
+          though this time I worked alongside two front end developers. Also
+          on our team were one UI developer and a back end developer.
+          Foodie Fun allows users to quickly journal information about their
+          meal through the application then add it to their profile to viewed another time. 
+          Our front end tech stack included:
+          React, Redux, React Router, Connected Router, Styled Components and CSS.
         </p>
         <MobileLinks>
           <p>
             github:{" "}
             <a
-              href="https://github.com/appraiserbff-lambda-build-week"
+              href="https://github.com/LS-Foodie-Fun6/Front-End"
               target="_blank"
               rel="noopener noreferrer"
             >
-              https://github.com/appraiserbff-lambda-build-week
+              https://github.com/LS-Foodie-Fun6/Front-End
             </a>
           </p>
         </MobileLinks>
       </ProjectDiscription>
+
+
+{/* #### APP: PORTFOLIO ####### */}
 
       <Project style={{ backgroundImage: `url(${Portfolio})` }}>
         <HoverProject
@@ -301,7 +324,7 @@ function Projects(props) {
             <button
               onClick={e =>
                 window.open(
-                  "https://github.com/TomHessburg/My-Portfolio",
+                  "https://github.com/justinwilly/My-Portfolio",
                   "_blank"
                 )
               }
@@ -328,11 +351,11 @@ function Projects(props) {
           <p>
             github:{" "}
             <a
-              href="https://github.com/TomHessburg/My-Portfolio"
+              href="https://github.com/justinwilly/My-Portfolio"
               target="_blank"
               rel="noopener noreferrer"
             >
-              https://github.com/TomHessburg/My-Portfolio
+              https://github.com/justinwilly/My-Portfolio
             </a>
           </p>
         </MobileLinks>
@@ -404,7 +427,7 @@ const HoverProject = styled.div`
     width: 155px;
     height: 40px;
     margin: 10px;
-    color: white;
+    color: black;
     font-size: 20px;
     opacity: 1;
     @media (max-width: 600px) {
@@ -412,13 +435,13 @@ const HoverProject = styled.div`
       height: 30px;
     }
     &:nth-child(1) {
-      background: #19ab33;
-      border: 2px solid #19ab33;
+      background: #F2545b;
+      border: 5px solid #F2545b;
     }
     &:nth-child(2) {
       background: white;
-      border: 2px solid white;
-      color: #19ab33;
+      border: 5px solid white;
+      color: #F2545b;
     }
   }
 `;
