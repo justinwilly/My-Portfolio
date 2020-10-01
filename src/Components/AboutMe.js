@@ -34,9 +34,7 @@ export default function AboutMe() {
         </h2>
         <hr />
         <Slogan className={inView ? styles.fadeInText : styles.fadeOutText}>
-          "...Persistence and determination alone are omnipotent. The slogan
-          Press On! has solved and always will solve the problems of the human
-          race...” <br />- Calvin Coolidge
+          "...If you don’t know how to do something, say yes and learn how to do it later...” <br />- Richard Branson
         </Slogan>
         <AboutMeWrapper>
           <AboutMeText>
@@ -49,11 +47,18 @@ export default function AboutMe() {
               Florida. I love to create and I'm excited to learn and grow in the
               tech field. <br />
               <br />
-              Over the past several years I have worked as a web developer for a local business.  This opportunity presented it self as I graduated
-              after my bachelors degree and I decided "How hard could it be?" so I said "Yes".  Little did I know at that time I had just changed
+              Over the past several years I have worked as a freelance web developer for a local business.  This opportunity to build a website presented it self as I graduated
+              with my bachelors degree and I decided "How hard could it be?" so I said "Yes".  Little did I know at that time I had just changed
               the path of my life.  
-
               <br />
+              <br />
+              I began my journey in early 2017 with Wordpress learning how to build a basic website through online tutorials.  
+              As the rabbit hole presents it self to any future developer I quickly got sucked in.  Running into things I wish I knew how to customize or 
+              how to do fully on my own.  That next year I received the opportunity to attend the first part of Udacity Grow with Google.
+              After finishing the 3-month program I felt lost and did not know where to go to keep learning.
+              <br />
+              
+              
               {/* <br />
               Over the past several years I've worked as a
               web developer for a local business in Orlando. As the latter, I wrote and mixed hundreds of songs
@@ -67,7 +72,8 @@ export default function AboutMe() {
               2019, I began attending Lambda School (an online, fully immersive,
               30+ week full stack bootcamp).
               <br /> */}
-              <br /> I can proudly say that after more than a half a year and
+              <br /> In the fall of 2019 I began attending Lambda School (an online, fully immersive, 30+ week full stack computer science course).
+              I can proudly say that after a year and
               1,000 hours of study, I'm ready to make my move into the
               workforce. I would love to discuss how my talents may fit with
               your company!
@@ -169,7 +175,7 @@ export default function AboutMe() {
               </PopOver>
             </TechnologyOdd>
             <TechnologyEven style={{ position: "relative" }}>
-              <i className="fab fa-adobe" />
+              <i className="fab fa-python" />
               <h4>Adobe</h4>
               <PopOver
                 className={adobe ? styles.popoverHover : styles.popoverHoverOut}
