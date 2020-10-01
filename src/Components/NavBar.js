@@ -79,9 +79,9 @@ const AppBar = styled.div`
   justify-content: flex-end;
   box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.2);
   position: fixed;
-  right: 0;
-  bottom: 0;
-  border-top-left-radius: 20px;
+  left: 0;
+  top: 0;
+  border-bottom-right-radius: 20px;
   @media (max-width: 650px) {
     justify-content: center;
     width: 100%;
