@@ -34,7 +34,7 @@ export default function AboutMe() {
         </h2>
         <hr />
         <Slogan className={inView ? styles.fadeInText : styles.fadeOutText}>
-          "...If you don’t know how to do something, say yes and learn how to do it later...” <br />- Richard Branson
+          "...If someone offers you an amazing opportunity and you're not sure you can do it, say yes - then learn how to do it later...” <br />- Richard Branson
         </Slogan>
         <AboutMeWrapper>
           <AboutMeText>
@@ -57,21 +57,6 @@ export default function AboutMe() {
               how to do fully on my own.  That next year I received the opportunity to attend the first part of Udacity Grow with Google.
               After finishing the 3-month program I felt lost and did not know where to go to keep learning.
               <br />
-              
-              
-              {/* <br />
-              Over the past several years I've worked as a
-              web developer for a local business in Orlando. As the latter, I wrote and mixed hundreds of songs
-              for bands and music groups. However, I've found my true passion in
-              learning to create software.
-              <br />
-              <br /> I began my journey in mid-2018 with JavaScript by picking
-              up some books, courses, and anything else I could get my hands on.
-              I spent 12 hours a day trying to learn EVERYTHING that I possibly
-              could and accelerate my learning as much as possible. By early
-              2019, I began attending Lambda School (an online, fully immersive,
-              30+ week full stack bootcamp).
-              <br /> */}
               <br /> In the fall of 2019 I began attending Lambda School (an online, fully immersive, 30+ week full stack computer science course).
               I can proudly say that after a year and
               1,000 hours of study, I'm ready to make my move into the
@@ -174,9 +159,10 @@ export default function AboutMe() {
                 <p>Building clean UI's is a passion of mine</p>
               </PopOver>
             </TechnologyOdd>
+
             <TechnologyEven style={{ position: "relative" }}>
               <i className="fab fa-python" />
-              <h4>Adobe</h4>
+              <h4>Python</h4>
               <PopOver
                 className={adobe ? styles.popoverHover : styles.popoverHoverOut}
                 onMouseEnter={e => {
@@ -186,9 +172,10 @@ export default function AboutMe() {
                   setAdobe(false);
                 }}
               >
-                <p>Able to work with design docs in Photoshop and XD</p>
+                <p>Writing clean python3 and building data structures, algorithms and code challenges </p>
               </PopOver>
             </TechnologyEven>
+            
             <TechnologyOdd style={{ position: "relative" }}>
               <i className="fab fa-github" />
               <h4>Git</h4>
@@ -356,7 +343,7 @@ const PopOver = styled.div`
   right: 0;
   width: 100%;
   height: 100%;
-  background: #07a828;
+  background: black;
   color: white;
   opacity: 0;
   cursor: default;
